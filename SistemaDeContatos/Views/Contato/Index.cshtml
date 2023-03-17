@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Listagem de contatos";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Listagem de contatos</h1>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <a role="button" class="btn btn-outline-primary" asp-controller="Contato" asp-action="Criar">Novo contato</a>
+    </div>
+    <br/>
+
+    <table class="table table-white table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Celular</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>teste@gmail.com</td>
+                <td>(81) 99273-1826</td>
+                <td>
+                    <a role="button" class="btn btn-outline-primary">Editar</a>
+                    <a role="button" class="btn btn-outline-danger">Apagar</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>outro@gmail.com</td>
+                <td>(81) 99433-1326</td>
+                 <td>
+                    <a role="button" class="btn btn-outline-primary">Editar</a>
+                    <a role="button" class="btn btn-outline-danger">Apagar</a>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry the Bird</td>
+                <td>mais@gmail.com</td>
+                <td>(81) 99233-2326</td>
+                 <td>
+                    <a role="button" class="btn btn-outline-primary">Editar</a>
+                    <a role="button" class="btn btn-outline-danger">Apagar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
