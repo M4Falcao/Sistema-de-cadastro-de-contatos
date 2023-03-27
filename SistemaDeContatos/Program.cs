@@ -1,3 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using SistemaDeContatos.Data;
+using SistemaDeContatos.Repositorio;
+using System.Runtime;
+
 namespace SistemaDeContatos
 {
     public class Program
@@ -8,6 +13,12 @@ namespace SistemaDeContatos
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            var connectionString = builder.Configuration.GetConnectionString("Database");
+            builder.Services.AddEntityFrameworkSqlServer()
+                .AddDbContext<BancoContext>(options =>
+                    options.UseSqlServer(connectionString));
+            builder.Services.AddScoped<IContatoRepositorio, ContatoRepositorio>();
 
             var app = builder.Build();
 
